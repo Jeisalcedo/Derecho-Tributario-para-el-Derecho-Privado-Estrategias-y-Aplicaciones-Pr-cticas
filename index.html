@@ -8,6 +8,27 @@
     <style>
         :root {
             --primary-color: #2c3e50;
+            /* ===== ESTILOS PARA EL LOGO UAN ===== */
+.logo-uan {
+    height: 60px;
+    margin-right: auto; /* Lo posiciona a la izquierda */
+    padding: 5px 0;
+}
+
+.logo-uan img {
+    height: 100%;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 768px) {
+    .logo-uan {
+        height: 50px;
+        order: -1; /* Lo coloca arriba en móviles */
+        margin: 0 auto 10px; /* Centrado */
+    }
+}
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
             --light-color: #ecf0f1;
@@ -635,8 +656,13 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Tributario<span>Privado</span></a>
+    <div class="nav-container">
+        <!-- Logo UAN - NUEVO CÓDIGO -->
+        <div class="logo-uan">
+            <img src="img/logo-uan.png" alt="Logo Universidad Antonio Nariño">
+        </div>
+        
+        <a href="#" class="logo">Tributario<span>Privado</span></a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
