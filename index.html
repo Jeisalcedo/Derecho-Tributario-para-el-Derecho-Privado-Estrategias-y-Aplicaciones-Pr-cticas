@@ -4,81 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Derecho Tributario para el Derecho Privado</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      border-radius: 12px;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    section {
-      margin-top: 2rem;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-      margin: 1rem 0;
-      padding: 0.6rem 1.2rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    #temario {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: opacity 0.5s ease, max-height 0.5s ease;
-    }
-
-    #temario.show {
-      opacity: 1;
-      max-height: 1000px;
-    }
-
-    .img-ilustrativa {
-      display: block;
-      margin: 2rem auto;
-      max-width: 90%;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
+  <header class="main-header">
     <h1>Derecho Tributario para el Derecho Privado</h1>
     <p>Estrategias y Aplicaciones Prácticas</p>
   </header>
 
-  <img src="img/ilustracion1.jpg" alt="Ilustración IA 1" class="img-ilustrativa">
+  <nav class="navbar">
+    <a href="#intro">Introducción</a>
+    <a href="#temario">Temario</a>
+    <a href="#imagenes">Ilustraciones</a>
+  </nav>
 
-  <section>
+  <section id="intro" class="section">
     <h2>Introducción</h2>
     <p>
       El derecho tributario no es exclusivo del ámbito público; su impacto en el derecho privado es innegable y cada vez más relevante.
@@ -88,17 +30,15 @@
     </p>
   </section>
 
-  <img src="img/ilustracion2.jpg" alt="Ilustración IA 2" class="img-ilustrativa">
-
-  <section>
+  <section id="temario" class="section">
     <h2>Temario del Curso</h2>
     <button onclick="toggleTemario()">Ver / Ocultar Temario</button>
-    <div id="temario">
+    <div class="temario-list" id="temarioContent">
       <ul>
         <li><strong>Principios del Derecho Tributario:</strong> Fundamentos y fuentes del derecho tributario.</li>
         <li><strong>Normas NIIF y su Impacto Fiscal:</strong> Aplicación de las NIIF y su influencia en la tributación.</li>
-        <li><strong>Impuesto sobre la Renta para Personas Naturales (P.N.):</strong> Regulaciones, tarifas y estrategias.</li>
-        <li><strong>Impuesto sobre la Renta para Personas Jurídicas (P.J.):</strong> Tratamiento fiscal de sociedades.</li>
+        <li><strong>Impuesto sobre la Renta para Personas Naturales:</strong> Regulaciones, tarifas y estrategias.</li>
+        <li><strong>Impuesto sobre la Renta para Personas Jurídicas:</strong> Tratamiento fiscal de sociedades.</li>
         <li><strong>IVA:</strong> Aplicación, sujetos pasivos y aspectos clave en contratos.</li>
         <li><strong>Rentas Internacionales:</strong> Convenios para evitar la doble tributación.</li>
         <li><strong>Planeación Tributaria:</strong> Estrategias para minimizar riesgos y optimizar cargas.</li>
@@ -106,14 +46,19 @@
     </div>
   </section>
 
-  <img src="img/ilustracion3.jpg" alt="Ilustración IA 3" class="img-ilustrativa">
+  <section id="imagenes" class="section">
+    <h2>Ilustraciones</h2>
+    <div class="gallery">
+      <img src="img/ilustracion1.png" alt="Abogada pensando en negocios">
+      <img src="img/ilustracion2.png" alt="Ruta hacia la planeación tributaria">
+      <img src="img/ilustracion3.png" alt="Aranceles, impuestos y leyes">
+    </div>
+  </section>
 
-  <script>
-    function toggleTemario() {
-      const temario = document.getElementById("temario");
-      temario.classList.toggle("show");
-    }
-  </script>
+  <footer>
+    <p>© 2025 Curso Derecho Tributario. Proyecto académico.</p>
+  </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
