@@ -1,64 +1,991 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derecho Tributario para el Derecho Privado</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho Tributario para el Derecho Privado | Estrategias y Aplicaciones Prácticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+            --transition: all 0.3s ease;
+            --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease;
+        }
+
+        .header-decoration {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .decoration-1 {
+            top: -150px;
+            right: -100px;
+        }
+
+        .decoration-2 {
+            bottom: -100px;
+            left: -100px;
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+            padding: 1rem 0;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            transform: translateY(10px);
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+            padding: 0.5rem 1.5rem;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .intro-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro-text {
+            flex: 1;
+        }
+
+        .intro-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .topics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .topic-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .topic-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .topic-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .topic-card:hover .topic-image img {
+            transform: scale(1.1);
+        }
+
+        .topic-content {
+            padding: 1.5rem;
+        }
+
+        .topic-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .methodology-list {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .methodology-list ul {
+            list-style-position: inside;
+            columns: 2;
+            gap: 2rem;
+        }
+
+        .methodology-list li {
+            margin-bottom: 1rem;
+            break-inside: avoid;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-icon {
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4);
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+
+        .btn:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-col p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 1;
+            }
+            20% {
+                transform: scale(25, 25);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+
+        /* Cursor Animation */
+        .cursor-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-outline {
+            width: 30px;
+            height: 30px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            transform: translate(-50%, -50%);
+            transition: all 0.2s ease-out;
+            mix-blend-mode: difference;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .intro-content {
+                flex-direction: column;
+            }
+            
+            .methodology-list ul {
+                columns: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                box-shadow: none;
+                padding: 0;
+                transform: none;
+                display: none;
+            }
+
+            .dropdown-menu.active {
+                display: block;
+            }
+
+            .dropdown-menu li {
+                padding: 0.5rem 0;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-  <header class="main-header">
-    <h1>Derecho Tributario para el Derecho Privado</h1>
-    <p>Estrategias y Aplicaciones Prácticas</p>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="header-decoration decoration-1"></div>
+        <div class="header-decoration decoration-2"></div>
+        <div class="header-content">
+            <h1>Derecho Tributario para el Derecho Privado</h1>
+            <p>Estrategias y Aplicaciones Prácticas</p>
+        </div>
+    </header>
 
-  <nav class="navbar">
-    <a href="#intro">Introducción</a>
-    <a href="#temario">Temario</a>
-    <a href="#imagenes">Ilustraciones</a>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Tributario<span>Privado</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#introduccion">Introducción</a></li>
+                <li class="dropdown">
+                    <a href="#temas">Temas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#tema1">Principios del Derecho Tributario</a></li>
+                        <li><a href="#tema2">Normas NIIF y su Impacto Fiscal</a></li>
+                        <li><a href="#tema3">Impuesto sobre la Renta (P.N.)</a></li>
+                        <li><a href="#tema4">Impuesto sobre la Renta (P.J.)</a></li>
+                        <li><a href="#tema5">Impuesto a las Ventas (IVA)</a></li>
+                        <li><a href="#tema6">Rentas Internacionales</a></li>
+                        <li><a href="#tema7">Planeación Tributaria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <section id="intro" class="section">
-    <h2>Introducción</h2>
-    <p>
-      El derecho tributario no es exclusivo del ámbito público; su impacto en el derecho privado es innegable y cada vez más relevante.
-      Abogados y estudiantes de derecho deben comprender cómo las obligaciones fiscales afectan contratos, sociedades y patrimonios.
-      Este curso ofrece una visión integral sobre la relación entre derecho tributario y derecho privado, proporcionando herramientas para
-      prevenir contingencias fiscales y optimizar estructuras legales.
-    </p>
-  </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Introducción -->
+        <section id="introduccion">
+            <div class="section-title">
+                <h2>Introducción</h2>
+            </div>
+            
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>El derecho tributario no es exclusivo del ámbito público; su impacto en el derecho privado es innegable y cada vez más relevante. Abogados y estudiantes de derecho deben comprender cómo las obligaciones fiscales afectan contratos, sociedades y patrimonios, lo que permite una mejor asesoría y gestión legal.</p>
+                    <p>Este curso ofrece una visión integral sobre la relación entre derecho tributario y derecho privado, proporcionando herramientas para prevenir contingencias fiscales y optimizar estructuras legales.</p>
+                    <a href="#temas" class="btn">Ver Temas del Curso</a>
+                </div>
+                <div class="intro-image">
+                    <!-- Espacio para ilustración -->
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Derecho Tributario">
+                </div>
+            </div>
+        </section>
 
-  <section id="temario" class="section">
-    <h2>Temario del Curso</h2>
-    <button onclick="toggleTemario()">Ver / Ocultar Temario</button>
-    <div class="temario-list" id="temarioContent">
-      <ul>
-        <li><strong>Principios del Derecho Tributario:</strong> Fundamentos y fuentes del derecho tributario.</li>
-        <li><strong>Normas NIIF y su Impacto Fiscal:</strong> Aplicación de las NIIF y su influencia en la tributación.</li>
-        <li><strong>Impuesto sobre la Renta para Personas Naturales:</strong> Regulaciones, tarifas y estrategias.</li>
-        <li><strong>Impuesto sobre la Renta para Personas Jurídicas:</strong> Tratamiento fiscal de sociedades.</li>
-        <li><strong>IVA:</strong> Aplicación, sujetos pasivos y aspectos clave en contratos.</li>
-        <li><strong>Rentas Internacionales:</strong> Convenios para evitar la doble tributación.</li>
-        <li><strong>Planeación Tributaria:</strong> Estrategias para minimizar riesgos y optimizar cargas.</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Temas a tratar -->
+        <section id="temas">
+            <div class="section-title">
+                <h2>Temas a Tratar</h2>
+            </div>
+            
+            <div class="topics-container">
+                <!-- Tema 1 -->
+                <div class="topic-card" id="tema1">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Principios del Derecho Tributario">
+                    </div>
+                    <div class="topic-content">
+                        <h3>1. Principios del Derecho Tributario</h3>
+                        <p>Fundamentos y fuentes del derecho tributario. Análisis de los principios constitucionales que rigen la materia tributaria y su aplicación en el derecho privado.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 2 -->
+                <div class="topic-card" id="tema2">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Normas NIIF">
+                    </div>
+                    <div class="topic-content">
+                        <h3>2. Normas NIIF y su Impacto Fiscal</h3>
+                        <p>Aplicación de las NIIF y su influencia en la tributación. Cómo las normas internacionales de información financiera afectan el cálculo y declaración de impuestos.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 3 -->
+                <div class="topic-card" id="tema3">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Impuesto sobre la Renta">
+                    </div>
+                    <div class="topic-content">
+                        <h3>3. Impuesto sobre la Renta para Personas Naturales (P.N.)</h3>
+                        <p>Regulaciones, tarifas y estrategias de optimización fiscal para personas naturales. Aspectos clave en la declaración y planificación fiscal personal.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 4 -->
+                <div class="topic-card" id="tema4">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Personas Jurídicas">
+                    </div>
+                    <div class="topic-content">
+                        <h3>4. Impuesto sobre la Renta para Personas Jurídicas (P.J.)</h3>
+                        <p>Tratamiento fiscal de sociedades y efectos en estructuras empresariales. Análisis de regímenes especiales y beneficios tributarios para empresas.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 5 -->
+                <div class="topic-card" id="tema5">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IVA">
+                    </div>
+                    <div class="topic-content">
+                        <h3>5. Impuesto a las Ventas (IVA)</h3>
+                        <p>Aplicación, sujetos pasivos y aspectos clave en contratos y negocios. Manejo del IVA en operaciones nacionales e internacionales.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 6 -->
+                <div class="topic-card" id="tema6">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Rentas Internacionales">
+                    </div>
+                    <div class="topic-content">
+                        <h3>6. Rentas Internacionales y Convenios para Evitar la Doble Tributación</h3>
+                        <p>Implicaciones fiscales de operaciones transfronterizas. Análisis de convenios internacionales y su aplicación en el derecho privado.</p>
+                    </div>
+                </div>
+                
+                <!-- Tema 7 -->
+                <div class="topic-card" id="tema7">
+                    <div class="topic-image">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Planeación Tributaria">
+                    </div>
+                    <div class="topic-content">
+                        <h3>7. Planeación Tributaria y Gestión del Riesgo Fiscal</h3>
+                        <p>Estrategias para minimizar riesgos y optimizar cargas tributarias. Herramientas legales para una adecuada planificación fiscal en el ámbito privado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="imagenes" class="section">
-    <h2>Ilustraciones</h2>
-    <div class="gallery">
-      <img src="img/abogada-negocios.png" alt="Abogada pensando en negocios">
-      <img src="img/planeacion-tributaria-callejero.png" alt="Ruta hacia la planeación tributaria">
-      <img src="img/aranceles-impuestos.png" alt="Aranceles, impuestos y leyes">
-    </div>
-  </section>
+        <!-- Metodología -->
+        <section id="metodologia">
+            <div class="section-title">
+                <h2>Metodología</h2>
+            </div>
+            
+            <div class="methodology-list">
+                <ul>
+                    <li><strong>Lecturas guiadas</strong> sobre normatividad, doctrina y jurisprudencia relevante.</li>
+                    <li><strong>Casos prácticos</strong> que permitan aplicar los conocimientos en situaciones reales.</li>
+                    <li><strong>Debates y foros</strong> de discusión para el análisis de problemáticas actuales.</li>
+                    <li><strong>Ejercicios de planeación tributaria</strong> para comprender la toma de decisiones estratégicas en el derecho privado.</li>
+                    <li><strong>Talleres interactivos</strong> sobre redacción de cláusulas fiscales en contratos.</li>
+                    <li><strong>Simulaciones</strong> de procesos de fiscalización y defensa ante autoridades tributarias.</li>
+                </ul>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 Curso Derecho Tributario. Proyecto académico.</p>
-  </footer>
+        <!-- Habilidades Adquiridas -->
+        <section id="habilidades">
+            <div class="section-title">
+                <h2>Habilidades y Capacidades Adquiridas</h2>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <p>Comprender la relación entre derecho tributario y derecho privado.</p>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <p>Identificar riesgos fiscales en contratos y estructuras societarias.</p>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <p>Aplicar estrategias de planeación tributaria.</p>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <p>Analizar casos reales y brindar asesoría efectiva en materia tributaria.</p>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <p>Interpretar normas tributarias y su impacto en el derecho privado.</p>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <p>Asesorar en operaciones de fusiones y adquisiciones desde el aspecto tributario.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="js/main.js"></script>
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Acerca del Curso</h3>
+                <p>Este curso ofrece una visión integral sobre la relación entre derecho tributario y derecho privado, proporcionando herramientas para prevenir contingencias fiscales y optimizar estructuras legales.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#temas">Temas del Curso</a></li>
+                    <li><a href="#metodologia">Metodología</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> info@tributarioprivado.com</p>
+                <p><i class="fas fa-phone"></i> +57 123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Suscríbete</h3>
+                <p>Recibe información sobre nuevos cursos y actualizaciones.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Derecho Tributario para el Derecho Privado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Mobile Dropdown Toggle
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    menu.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Custom Cursor
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        
+        window.addEventListener('mousemove', (e) => {
+            cursorDot.style.left = `${e.clientX}px`;
+            cursorDot.style.top = `${e.clientY}px`;
+            
+            cursorOutline.style.left = `${e.clientX}px`;
+            cursorOutline.style.top = `${e.clientY}px`;
+            
+            // Cursor effects on hover
+            const hoverElements = document.querySelectorAll('a, button, .topic-card, .skill-item, .intro-image');
+            
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.2)';
+                    cursorOutline.style.borderColor = 'var(--accent-color)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.borderColor = 'var(--secondary-color)';
+                });
+            });
+        });
+        
+        // Scroll Animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.topic-card, .skill-item, .intro-content');
+            
+            elements.forEach(el => {
+                const elementPosition = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animation
+        document.querySelectorAll('.topic-card, .skill-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 </html>
