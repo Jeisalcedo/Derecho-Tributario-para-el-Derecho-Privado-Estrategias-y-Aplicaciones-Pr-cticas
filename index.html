@@ -2,108 +2,104 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Curso Derecho Tributario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derecho Tributario para el Derecho Privado</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f7fa;
+      padding: 2rem;
+      background-color: #f4f4f4;
       color: #333;
     }
+
     header {
-      background-color: #0b3d91;
+      background-color: #003366;
       color: white;
       padding: 1.5rem;
       text-align: center;
+      border-radius: 12px;
     }
-    nav {
-      background-color: #0857b2;
-      padding: 0.5rem;
-      text-align: center;
+
+    h1 {
+      margin: 0;
     }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
+
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #0b3d91;
-    }
-    img.hero {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+      background-color: white;
+      padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    footer {
-      background-color: #0b3d91;
+
+    button {
+      margin: 1rem 0;
+      padding: 0.6rem 1.2rem;
+      background-color: #007bff;
       color: white;
-      text-align: center;
-      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #temario {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease;
+    }
+
+    #temario.show {
+      opacity: 1;
+      max-height: 1000px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Derecho Tributario para el Derecho Privado</h1>
-  <p>Estrategias y Aplicaciones Prácticas</p>
-</header>
+  <header>
+    <h1>Derecho Tributario para el Derecho Privado</h1>
+    <p>Estrategias y Aplicaciones Prácticas</p>
+  </header>
 
-<nav>
-  <a href="#temas">Temas</a>
-  <a href="#metodologia">Metodología</a>
-  <a href="#habilidades">Habilidades</a>
-</nav>
+  <section>
+    <h2>Introducción</h2>
+    <p>
+      El derecho tributario no es exclusivo del ámbito público; su impacto en el derecho privado es innegable y cada vez más relevante.
+      Abogados y estudiantes de derecho deben comprender cómo las obligaciones fiscales afectan contratos, sociedades y patrimonios.
+      Este curso ofrece una visión integral sobre la relación entre derecho tributario y derecho privado, proporcionando herramientas para
+      prevenir contingencias fiscales y optimizar estructuras legales.
+    </p>
+  </section>
 
-<section>
- <img src="curso-tributario.png" alt="Ilustración del curso" class="hero"/>
+  <section>
+    <h2>Temario del Curso</h2>
+    <button onclick="toggleTemario()">Ver / Ocultar Temario</button>
+    <div id="temario">
+      <ul>
+        <li><strong>Principios del Derecho Tributario:</strong> Fundamentos y fuentes del derecho tributario.</li>
+        <li><strong>Normas NIIF y su Impacto Fiscal:</strong> Aplicación de las NIIF y su influencia en la tributación.</li>
+        <li><strong>Impuesto sobre la Renta para Personas Naturales (P.N.):</strong> Regulaciones, tarifas y estrategias.</li>
+        <li><strong>Impuesto sobre la Renta para Personas Jurídicas (P.J.):</strong> Tratamiento fiscal de sociedades.</li>
+        <li><strong>IVA:</strong> Aplicación, sujetos pasivos y aspectos clave en contratos.</li>
+        <li><strong>Rentas Internacionales:</strong> Convenios para evitar la doble tributación.</li>
+        <li><strong>Planeación Tributaria:</strong> Estrategias para minimizar riesgos y optimizar cargas.</li>
+      </ul>
+    </div>
+  </section>
 
-  <h2>Introducción</h2>
-  <p>El derecho tributario no es exclusivo del ámbito público; su impacto en el derecho privado es innegable y cada vez más relevante. Abogados y estudiantes de derecho deben comprender cómo las obligaciones fiscales afectan contratos, sociedades y patrimonios. Este curso ofrece una visión integral sobre la relación entre derecho tributario y derecho privado, proporcionando herramientas para prevenir contingencias fiscales y optimizar estructuras legales.</p>
-
-  <h2 id="temas">Temas a tratar</h2>
-  <ul>
-    <li>Principios del Derecho Tributario</li>
-    <li>Normas NIIF y su Impacto Fiscal</li>
-    <li>Impuesto sobre la Renta para Personas Naturales</li>
-    <li>Impuesto sobre la Renta para Personas Jurídicas</li>
-    <li>Impuesto a las Ventas (IVA)</li>
-    <li>Rentas Internacionales y Convenios</li>
-    <li>Planeación Tributaria y Gestión del Riesgo Fiscal</li>
-    <li><strong>Sugerencia:</strong> Tributación en Fusiones y Adquisiciones</li>
-  </ul>
-
-  <h2 id="metodologia">Metodología</h2>
-  <ul>
-    <li>Lecturas guiadas</li>
-    <li>Casos prácticos</li>
-    <li>Debates y foros</li>
-    <li>Ejercicios de planeación tributaria</li>
-  </ul>
-
-  <h2 id="habilidades">Habilidades Adquiridas</h2>
-  <ul>
-    <li>Comprensión del vínculo entre derecho tributario y privado</li>
-    <li>Identificación de riesgos fiscales</li>
-    <li>Aplicación de estrategias tributarias</li>
-    <li>Asesoría efectiva en casos reales</li>
-    <li>Interpretación normativa tributaria</li>
-  </ul>
-</section>
-
-<footer>
-  <p>&copy; 2025 Curso Derecho Tributario | Diseñado con ayuda de IA</p>
-</footer>
+  <script>
+    function toggleTemario() {
+      const temario = document.getElementById("temario");
+      temario.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>
